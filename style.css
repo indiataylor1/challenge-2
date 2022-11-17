@@ -131,7 +131,7 @@ h3 { font-size: var(--fs-h3) }
 
 /* Header */ 
 
-header { /*can't get my logo to fit*/
+header {
     display: flex;
     justify-content: space-between;
     padding: 1em; 
@@ -291,10 +291,7 @@ header { /*can't get my logo to fit*/
     background-color: var(--clr-dark);
     color: var(--clr-light);
     background-size: cover;
-    background-image: url(..); /*can't find an image suitable*/
-    /* background-blend-mode: multiply; -- changes the filter to the accent color*/ 
     text-align: center;
- 
 }
 
 /* 'What I do' title */
@@ -383,12 +380,13 @@ header { /*can't get my logo to fit*/
         left: -1em;
         width: calc(100% + 2em);
         padding-left: 1em;
-        padding-right: calc(200px + 2em);
+        padding-right: calc(200px + 4em);
     }
 
     .about-me__img {
         grid-area: img; 
         position: relative;
+        z-index: 2;
 
     }
 
@@ -435,7 +433,7 @@ header { /*can't get my logo to fit*/
     opacity: .75; /* can change how much accent color I want */
  }
 
-/* Footer */
+/* Footer styling */
 
 .footer {
     background: #111;
@@ -450,20 +448,25 @@ header { /*can't get my logo to fit*/
     text-decoration: none;
 }
 
-.footer__link {
+/* email link styling */
+
+.footer-link {
     font-weight: var(--fw-bold);
+    justify-content: center;
 }
 
-.footer__link:hover,
+.footer-link:hover,
 .social-list__link:hover {
     opacity: .7;
 }
 
-.footer__link:hover {
+.footer-link:hover {
     text-decoration: underline;
 }
 
-.social-list {
+/* GitHub link styling */
+
+.social-list__item {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -472,7 +475,7 @@ header { /*can't get my logo to fit*/
 }
 
 .social-list__item {
-    margin: 0.5em;
+    margin: 1em;
 }
 
 .social-list__link {
