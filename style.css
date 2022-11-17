@@ -22,7 +22,7 @@
     --fs-body: 1rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25); 
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    --bs: 0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
@@ -35,6 +35,10 @@
 }
 
 /* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: var(--clr-light);
@@ -127,7 +131,7 @@ h3 { font-size: var(--fs-h3) }
 
 /* Header */ 
 
-header { /*may not need this - it's for a logo*/
+header { /*can't get my logo to fit*/
     display: flex;
     justify-content: space-between;
     padding: 1em; 
@@ -184,6 +188,27 @@ header { /*may not need this - it's for a logo*/
     color: var(--clr-accent);
 }
 
+/*JavaScript hamburger styling*/
+.nav-open .nav {
+    transform: translateX(0); /*slides the menu from the right*/
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
 /* Hamburger styling */
 
 .hamburger {
@@ -194,10 +219,10 @@ header { /*may not need this - it's for a logo*/
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
-    border-radius: 1em;
+    border-radius: 2em;
     transition: transform 250ms ease-in-out;
 }
 

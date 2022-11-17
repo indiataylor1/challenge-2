@@ -26,7 +26,7 @@ THEN I am presented with a presponsive layout that adapts to my viewport
 
 ## Link to Deployed Action
 
-https://indiataylor1.github.io/challenge-one/
+https://indiataylor1.github.io/challenge-2/
   
 ## Screenshot
 ![challenge-uno-screenshot](https://user-images.githubusercontent.com/116799866/200796394-ed27e451-b58e-4cc3-9be6-2dbf4bace4d6.png)
